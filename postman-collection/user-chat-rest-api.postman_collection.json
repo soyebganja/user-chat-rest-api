@@ -1,0 +1,87 @@
+{
+	"variables": [],
+	"info": {
+		"name": "user-chat-rest-api",
+		"_postman_id": "55348f99-bada-c90d-f8b6-f581d3898b66",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User_Register",
+			"request": {
+				"url": "http://localhost:3003/api/auth/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"shoaib\",\n\t\"lastName\": \"ganja\",\n\t\"username\": \"asganja\",\n\t\"password\": \"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User_Login",
+			"request": {
+				"url": "http://localhost:3003/api/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"asganja\",\n\t\"password\": \"123456\"\n}"
+				},
+				"description": "a. User can enter a chat after Registration"
+			},
+			"response": []
+		},
+		{
+			"name": "User_Send_Send_Message",
+			"request": {
+				"url": "http://localhost:3003/api/usermessage",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyQ29udGV4dCI6eyJfaWQiOiI1ZjZjNmY0ZGZiMTE1YzJiOGQ1MzgyMDIiLCJmaXJzdE5hbWUiOiJzaG9haWIiLCJsYXN0TmFtZSI6ImdhbmphIiwidXNlcm5hbWUiOiJhc2dhbmphIn0sImlhdCI6MTYwMDk0MTkyMCwiZXhwIjoxNjAwOTQ5MTIwfQ.nwvIvRcsMB2KNrIzQIPwmMz3ppBU7Y2ZMzb6S4VK4PQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": \"hiiii abdullah\"\n}"
+				},
+				"description": "b. User can send a message with user token to identify user"
+			},
+			"response": []
+		},
+		{
+			"name": "User_Can_Enter_Chat_After_Registration",
+			"request": {
+				"url": "http://localhost:3003/api/usermessage",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "c. User can receive messages that were sent in chat before he enters the chat"
+			},
+			"response": []
+		}
+	]
+}
