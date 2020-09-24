@@ -15,10 +15,20 @@
 3. $ npm i
 ```
 
-4. Create .env file at root level from .env.example and set environmental values
+```shell
+4. $ code .
+```
+
+5. Create .env file at root level from a reference file .env.example and set environmental values
 
 ### To Run the program by using
 
 ```shell
 $ npm start
+```
+
+### To play with api postman-collections is available at path, you can import it on your postman 
+
+```shell
+$ code postman-collection/.
 ```
